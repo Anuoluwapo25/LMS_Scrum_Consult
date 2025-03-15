@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import '../Learner/home.css'
 import Amico from "../../assets/amico.png";
-// import ImgSample1 from "../../../assets/portfolio-2.png";
-// import ImgSample2 from "../../../assets/portfolio-3.png";
-// import ImgSample3 from "../../../assets/portfolio-4.png";
+import GoogleIcon from '../../assets/googleIcon.png'
+import LinkedinIcon from '../../assets/devicon_linkedin.png'
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -232,14 +231,14 @@ const Home = () => {
                 )}
             </div>
             
-            <div className="password-requirements">
+            {/* <div className="password-requirements">
               <p className={minLength.test(password) ? 'valid' : 'invalid'} >Be a minimum of 8 characters</p>
               <p  className={lowerCase.test(password) ? 'valid' : 'invalid'}>Include at least one lowecase letter (a-z)</p>
               <p  className={upperCase.test(password) ? 'valid' : 'invalid'}>Include at least one uppercase letter (A-Z)</p>
               <p  className={number.test(password) ? 'valid' : 'invalid'}>Include at least one number (0-9)</p>
 
               <p  className={specialCharacter.test(password) ? 'valid' : 'invalid'}>Include at least one Special Character (0-9)</p>
-            </div>
+            </div> */}
       
 
 
@@ -286,17 +285,12 @@ const Home = () => {
 
           {/* Social Login Buttons */}
           <div className="flex flex-wrap gap-4 items-center justify-center mt-6">
-            <a href="#" className="social-btn linkedin-btn">
-              <img className="w-8 h-8 mr-2" src={Amico} alt="LinkedIn" />
-              LinkedIn
+            <a href="#" className="social-btn google-btn ">
+              <img className="w-14 h-14 mr-2  border rounded-full  border-black" src={GoogleIcon} alt="Google" />
+              
             </a>
-            <a href="#" className="social-btn google-btn">
-              <img className="w-8 h-8 mr-2" src={Amico} alt="Google" />
-              Google
-            </a>
-            <a href="#" className="social-btn facebook-btn">
-              <img className="w-8 h-8 mr-2" src={Amico} alt="Facebook" />
-              Facebook
+            <a href="#" className="social-btn linkedin-btn rounded-full border-black border">
+              <img className="w-14 h-14 p-2 " src={LinkedinIcon} alt="LinkedIn" />
             </a>
           </div>
 
